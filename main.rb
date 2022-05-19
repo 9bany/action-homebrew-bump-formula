@@ -104,6 +104,7 @@ module Homebrew
     print tag
     # Check if formula is originating from PyPi
     pypi_url = PyPI.update_pypi_url(stable.url, version)
+    print pypi_url
     if pypi_url
       # Substitute url
       url = pypi_url
