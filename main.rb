@@ -95,10 +95,13 @@ module Homebrew
     is_git = stable.downloader.is_a? GitDownloadStrategy
 
     # Prepare tag and url
-    # tag = tag.delete_prefix 'refs/tags/'
+    tag = tag.delete_prefix 'refs/tags/'
     version = Version.parse tag
     url = stable.url.gsub stable.version, version
-
+    print "My log"
+    print url
+    print version
+    print tag
     # Check if formula is originating from PyPi
     pypi_url = PyPI.update_pypi_url(stable.url, version)
     if pypi_url

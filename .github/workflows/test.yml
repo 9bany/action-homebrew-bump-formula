@@ -1,12 +1,7 @@
 name: Test Action
 
-on:
-  push:
-    branches:
-      - "*"
-    paths-ignore:
-      - README.md
-
+on: push
+  
 jobs:
   test:
     strategy:
