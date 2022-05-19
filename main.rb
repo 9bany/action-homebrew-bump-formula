@@ -95,7 +95,7 @@ module Homebrew
     is_git = stable.downloader.is_a? GitDownloadStrategy
 
     # Prepare tag and url
-    tag = tag.delete_prefix 'refs/tags/'
+    # tag = tag.delete_prefix 'refs/tags/'
     version = Version.parse tag
     url = stable.url.gsub stable.version, version
 
